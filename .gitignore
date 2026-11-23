@@ -1,0 +1,30 @@
+node_modules/
+data/*.db
+data/*.db-wal
+data/*.db-shm
+data/*.db-journal
+uploads/*
+!uploads/.gitkeep
+.env
+npm-debug.log*
+.DS_Store
+# 临时隧道工具和日志
+tools/
+# 打包的 zip
+*.zip
+# 我生成的辅助脚本（本地用不上）
+serveo-watchdog.cmd
+start-demo.cmd
+setup-git.cmd
+# 我生成的辅助文档
+交付清单.md
+录屏脚本.md
+平台展示部署指南.md
+作业要求符合性核对清单.md
+README.md
+# 第一个验证码 demo（和本项目无关）
+random-code.html
+# 演示 PPT（太大，单独提交）
+lost-found-deck/
+# 系统文件
+Thumbs.db

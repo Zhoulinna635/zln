@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>信息详情 · 校园失物招领平台</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="progress-bar" id="progressBar"></div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/index.html"><span class="brand-logo">寻</span>校园失物招领</a>
+    <nav class="nav">
+      <a href="/index.html">首页</a>
+      <a href="/publish.html">发布信息</a>
+      <a href="/my.html">个人中心</a>
+      <a href="/admin.html" class="admin-only hidden">审核后台</a>
+    </nav>
+    <div id="userArea" class="user-area"></div>
+  </div>
+</header>
+
+<main class="container">
+  <div class="detail-layout">
+    <section class="card detail-main" id="detailMain">
+      <div class="empty">加载中...</div>
+    </section>
+
+    <aside class="detail-side">
+      <div class="card publisher" id="publisherBox"></div>
+      <div class="card comment-box" id="commentBox"></div>
+    </aside>
+  </div>
+</main>
+
+<button class="back-top" id="backTop" title="回到顶部">↑</button>
+<div class="site-footer" id="siteFooter"></div>
+
+<script src="/js/common.js"></script>
+<script src="/js/detail.js"></script>
+</body>
+</html>

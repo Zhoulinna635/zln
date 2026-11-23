@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>发布信息 · 校园失物招领平台</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/index.html"><span class="brand-logo">寻</span>校园失物招领</a>
+    <nav class="nav">
+      <a href="/index.html">首页</a>
+      <a href="/publish.html">发布信息</a>
+      <a href="/my.html">个人中心</a>
+      <a href="/admin.html" class="admin-only hidden">审核后台</a>
+    </nav>
+    <div id="userArea" class="user-area"></div>
+  </div>
+</header>
+
+<main class="card form-page">
+  <h1 id="pageTitle">发布失物 / 招领信息</h1>
+  <p class="sub">信息发布后需管理员审核，审核通过即可在首页展示；请勿填写虚假信息。</p>
+
+  <form id="publishForm">
+    <div class="form-item">
+      <label>信息类型</label>
+      <div class="type-switch" id="typeSwitch">
+        <div class="type-option active" data-type="lost">
+          <strong>我丢了东西</strong>
+          <span>发布失物求助信息</span>
+        </div>
+        <div class="type-option" data-type="found">
+          <strong>我捡到东西</strong>
+          <span>发布招领信息，等待失主认领</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-item">
+      <label for="title">标题</label>
+      <input class="input" id="title" maxlength="40" placeholder="例如：图书馆三楼捡到一张校园卡">
+    </div>
+
+    <div class="form-row">
+      <div class="form-item">
+        <label for="category">物品分类</label>
+        <select class="select" id="category">
+          <option value="">请选择分类</option>
+          <option>证件卡类</option>
+          <option>电子产品</option>
+          <option>书籍资料</option>
+          <option>衣物饰品</option>
+          <option>钥匙</option>
+          <option>其他</option>
+        </select>
+      </div>
+      <div class="form-item">
+        <label for="location">地点</label>
+        <input class="input" id="location" maxlength="30" placeholder="例如：图书馆三楼自习区">
+      </div>
+    </div>
+
+    <div class="form-item">
+      <label for="contact">联系方式 <span class="hint">未登录用户看到的是脱敏号码</span></label>
+      <input class="input" id="contact" maxlength="40" placeholder="手机号 / 微信号 / 邮箱">
+    </div>
+
+    <div class="form-item">
+      <label for="description">物品描述 <span class="hint"><span id="descCount">0</span>/300</span></label>
+      <textarea class="textarea" id="description" maxlength="300"
+        placeholder="请描述物品特征、丢失/拾取的时间与经过，便于对方确认"></textarea>
+    </div>
+
+    <div class="form-item">
+      <label>物品图片 <span class="hint">选填，支持 jpg / png / gif / webp，不超过 5MB</span></label>
+      <label class="upload-box" for="imageInput">
+        <div class="preview" id="preview">点击上传</div>
+        <div style="font-size:13px;color:#6b7280">
+          上传一张清晰的照片，有助于更快认领<br>
+          <span style="font-size:12px;color:#94a3b8">不上传时将按分类显示默认图案</span>
+        </div>
+      </label>
+      <input type="file" id="imageInput" accept="image/*" class="hidden">
+    </div>
+
+    <p class="error-text" id="formError"></p>
+
+    <div style="display:flex;gap:10px;margin-top:6px">
+      <button type="submit" class="btn btn-primary" id="submitBtn">发布信息</button>
+      <a class="btn" href="/index.html">取消</a>
+    </div>
+  </form>
+</main>
+
+<div class="site-footer" id="siteFooter"></div>
+
+<script src="/js/common.js"></script>
+<script src="/js/publish.js"></script>
+</body>
+</html>

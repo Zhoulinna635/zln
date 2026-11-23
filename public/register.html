@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>注册 · 校园失物招领平台</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="auth-page">
+<div class="card auth-card">
+  <h1>创建账号</h1>
+  <p class="sub">注册后可发布失物 / 招领信息</p>
+
+  <form id="registerForm">
+    <div class="form-item">
+      <label for="username">用户名 <span class="hint">3~16 位字母、数字或下划线</span></label>
+      <input class="input" id="username" autocomplete="username" placeholder="例如：xiaoming">
+    </div>
+    <div class="form-item">
+      <label for="nickname">昵称 <span class="hint">展示在信息与留言中</span></label>
+      <input class="input" id="nickname" maxlength="12" placeholder="例如：张小明">
+    </div>
+    <div class="form-item">
+      <label for="password">密码 <span class="hint">至少 6 位</span></label>
+      <input class="input" id="password" type="password" autocomplete="new-password" placeholder="请设置密码">
+    </div>
+    <div class="form-item">
+      <label for="confirm">确认密码</label>
+      <input class="input" id="confirm" type="password" autocomplete="new-password" placeholder="请再次输入密码">
+    </div>
+    <p class="error-text" id="errorBox"></p>
+    <button class="btn btn-primary btn-block" id="submitBtn" type="submit">注册并登录</button>
+  </form>
+
+  <div class="auth-switch">已有账号？<a href="/login.html">去登录</a></div>
+  <div class="auth-switch"><a href="/index.html">← 返回首页</a></div>
+</div>
+
+<script src="/js/common.js"></script>
+<script src="/js/auth.js"></script>
+</body>
+</html>
